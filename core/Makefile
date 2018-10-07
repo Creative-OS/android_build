@@ -6216,6 +6216,12 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 bacon: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CREATIVE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CREATIVE_TARGET_PACKAGE) > $(CREATIVE_TARGET_PACKAGE).md5sum
+	echo -e "========================================="
+	echo -e ""
+	echo -e "                CreativeOS"
+	echo -e ""
+	echo -e "========================================="
+	echo -e ""
 	@echo "**Package completed"**: $(CREATIVE_TARGET_PACKAGE)"
 
 ifeq ($(BOARD_BUILD_RETROFIT_DYNAMIC_PARTITIONS_OTA_PACKAGE),true)
